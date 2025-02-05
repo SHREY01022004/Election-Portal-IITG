@@ -1,0 +1,7 @@
+Django
+django_environ
+djangorestframework==3.13.1
+environ==1.0
+Pillow
+django-cors-headers
+web3

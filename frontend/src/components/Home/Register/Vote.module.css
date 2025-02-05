@@ -1,0 +1,48 @@
+
+.main{
+    background: #FFFFFF;
+
+/* 2 dp */
+box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
+border-radius: 6px;
+}
+.success {
+    font-family: 'Atkinson Hyperlegible';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+color: #34D058;
+}
+
+.cont{
+    background: #EDEEEF;
+border-radius: 8px;
+}
+
+.name{
+    font-family: 'Atkinson Hyperlegible';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2E2F2F;
+}
+
+.batch{
+    font-family: 'Atkinson Hyperlegible';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #2E2F2F;
+}
+
+.msg{
+    font-family: 'Atkinson Hyperlegible';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #4B5563;
+}

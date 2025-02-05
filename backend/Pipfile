@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django-environ = "*"
+environ = "*"
+Django = "*"
+djangorestframework = "*"
+gunicorn = "*"
+pycryptodome = "*"
+django-auth-adfs = "*"
+django-cors-headers = "*"
+pillow = "*"
+djangorestframework-simplejwt = "*"
+dj-rest-auth = {extras = ["with_social"], version = "*"}
+psycopg2-binary="*"
+xhtml2pdf="*"
+django-xhtml2pdf="*"
+django-jet-reboot = "*"
+feedparser = "*"
+web3 = "*"
+jsonfield = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

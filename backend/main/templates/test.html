@@ -1,0 +1,434 @@
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Swc</title>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+         <!-- Bootstrap CSS -->
+
+    <style>
+        :root {
+          --bs-blue: #0d6efd;
+          --bs-indigo: #6610f2;
+          --bs-purple: #6f42c1;
+          --bs-pink: #d63384;
+          --bs-red: #dc3545;
+          --bs-orange: #fd7e14;
+          --bs-yellow: #ffc107;
+          --bs-green: #198754;
+          --bs-teal: #20c997;
+          --bs-cyan: #0dcaf0;
+          --bs-white: #fff;
+          --bs-gray: #6c757d;
+          --bs-gray-dark: #343a40;
+          --bs-gray-100: #f8f9fa;
+          --bs-gray-200: #e9ecef;
+          --bs-gray-300: #dee2e6;
+          --bs-gray-400: #ced4da;
+          --bs-gray-500: #adb5bd;
+          --bs-gray-600: #6c757d;
+          --bs-gray-700: #495057;
+          --bs-gray-800: #343a40;
+          --bs-gray-900: #212529;
+          --bs-primary: #0d6efd;
+          --bs-secondary: #6c757d;
+          --bs-success: #198754;
+          --bs-info: #0dcaf0;
+          --bs-warning: #ffc107;
+          --bs-danger: #dc3545;
+          --bs-light: #f8f9fa;
+          --bs-dark: #212529;
+          --bs-primary-rgb: 13, 110, 253;
+          --bs-secondary-rgb: 108, 117, 125;
+          --bs-success-rgb: 25, 135, 84;
+          --bs-info-rgb: 13, 202, 240;
+          --bs-warning-rgb: 255, 193, 7;
+          --bs-danger-rgb: 220, 53, 69;
+          --bs-light-rgb: 248, 249, 250;
+          --bs-dark-rgb: 33, 37, 41;
+          --bs-white-rgb: 255, 255, 255;
+          --bs-black-rgb: 0, 0, 0;
+          --bs-body-bg-rgb: 255, 255, 255;
+          --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+          --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+          --bs-body-font-family: var(--bs-font-sans-serif);
+          --bs-body-font-size: 1rem;
+          --bs-body-font-weight: 400;
+          --bs-body-line-height: 1.5;
+          --bs-body-bg: #fff;
+        }
+        
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+        
+        
+        body {
+          margin: 0;
+          -webkit-text-size-adjust: 100%;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        
+        
+        .container,
+        .container-fluid,
+        .container-xxl,
+        .container-xl,
+        .container-lg,
+        .container-md,
+        .container-sm {
+          width: 100%;
+          /* padding-right: var(--bs-gutter-x, 0.75rem);
+          padding-left: var(--bs-gutter-x, 0.75rem); */
+          margin-right: auto;
+          margin-left: auto;
+        }
+        
+        .text-center {
+          text-align: center !important;
+        }
+        
+        .row {
+          /* --bs-gutter-x: 1.5rem; */
+          /* --bs-gutter-y: 0; */
+          display: flex;
+          flex-wrap: wrap;
+          /* margin-top: calc(-1 * var(--bs-gutter-y)); */
+          /* margin-right: calc(-0.5 * var(--bs-gutter-x));
+          margin-left: calc(-0.5 * var(--bs-gutter-x)); */
+        }
+        .row > * {
+          flex-shrink: 0;
+          width: 100%;
+          max-width: 100%;
+          /* padding-right: calc(var(--bs-gutter-x) * 0.5);
+          padding-left: calc(var(--bs-gutter-x) * 0.5); */
+          /* margin-top: var(--bs-gutter-y); */
+        }
+        
+        .col {
+          flex: 1 0 0%;
+        }
+        
+        .col-1 {
+          flex: 0 0 auto;
+          width: 8.33333333%;
+        }
+        
+        .col-2 {
+          flex: 0 0 auto;
+          width: 16.66666667%;
+        }
+        
+        .col-3 {
+          flex: 0 0 auto;
+          width: 25%;
+        }
+        
+        .col-4 {
+          flex: 0 0 auto;
+          width: 33.33333333%;
+        }
+        
+        .col-5 {
+          flex: 0 0 auto;
+          width: 41.66666667%;
+        }
+        
+        .col-6 {
+          flex: 0 0 auto;
+          width: 50%;
+        }
+        
+        .col-7 {
+          flex: 0 0 auto;
+          width: 58.33333333%;
+        }
+        
+        .col-8 {
+          flex: 0 0 auto;
+          width: 66.66666667%;
+        }
+        
+        .col-9 {
+          flex: 0 0 auto;
+          width: 75%;
+        }
+        
+        .col-10 {
+          flex: 0 0 auto;
+          width: 83.33333333%;
+        }
+        
+        .col-11 {
+          flex: 0 0 auto;
+          width: 91.66666667%;
+        }
+        
+        .col-12 {
+          flex: 0 0 auto;
+          width: 100%;
+        }
+        
+        .offset-1 {
+          margin-left: 8.33333333%;
+        }
+        
+        .offset-2 {
+          margin-left: 16.66666667%;
+        }
+        
+        .offset-3 {
+          margin-left: 25%;
+        }
+        
+        .offset-4 {
+          margin-left: 33.33333333%;
+        }
+        
+        .offset-5 {
+          margin-left: 41.66666667%;
+        }
+        
+        .offset-6 {
+          margin-left: 50%;
+        }
+        
+        .offset-7 {
+          margin-left: 58.33333333%;
+        }
+        
+        .offset-8 {
+          margin-left: 66.66666667%;
+        }
+        
+        .offset-9 {
+          margin-left: 75%;
+        }
+        
+        .offset-10 {
+          margin-left: 83.33333333%;
+        }
+        
+        .offset-11 {
+          margin-left: 91.66666667%;
+        }
+        
+        
+        .mt-1 {
+          margin-top: 0.25rem !important;
+        }
+        
+        .mt-2 {
+          margin-top: 0.5rem !important;
+        }
+        
+        .mt-3 {
+          margin-top: 1rem !important;
+        }
+        
+        .mt-4 {
+          margin-top: 1.5rem !important;
+        }
+        
+        .mt-5 {
+          margin-top: 3rem !important;
+        }
+        
+        .table {
+          --bs-table-bg: transparent;
+          --bs-table-accent-bg: transparent;
+          --bs-table-striped-color: #212529;
+          --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+          --bs-table-active-color: #212529;
+          --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+          --bs-table-hover-color: #212529;
+          --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+          width: 100%;
+          margin-bottom: 1rem;
+          color: #212529;
+          vertical-align: top;
+          border-color: #dee2e6;
+        }
+        .table > :not(caption) > * > * {
+          padding: 0.5rem 0.5rem;
+          background-color: var(--bs-table-bg);
+          border-bottom-width: 1px;
+          box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+        }
+        .table > tbody {
+          vertical-align: inherit;
+        }
+        .table > thead {
+          vertical-align: bottom;
+        }
+        
+        .table-primary {
+          --bs-table-bg: #cfe2ff;
+          --bs-table-striped-bg: #c5d7f2;
+          --bs-table-striped-color: #000;
+          --bs-table-active-bg: #bacbe6;
+          --bs-table-active-color: #000;
+          --bs-table-hover-bg: #bfd1ec;
+          --bs-table-hover-color: #000;
+          color: #000;
+          border-color: #bacbe6;
+        }
+        
+        
+        .pt-2 {
+          padding-top: 0.5rem !important;
+        }
+        
+        .pt-3 {
+          padding-top: 1rem !important;
+        }
+        
+        .border-primary {
+          border-color: #0d6efd !important;
+        }
+        
+        .p-2 {
+          padding: 0.5rem !important;
+        }
+        
+        .nlast{
+          position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+            </style>
+    </head>
+
+    <body>
+        <div style="text-align:center; font-size: large; padding: 5px; border: 10px; border-color: black; border-style: solid; margin-top: 30px;  margin-left: 20px; margin-right: 20px; margin-bottom: 10px;">
+        
+            <div class="row">
+                <div class="col-1">
+                    <img src="/backend/assets/admin/img/image.jpg" alt="iitg logo" style="width:8vw;height:8vw;">
+                </div>
+            <div class="col-11">
+                <div style="text-align:center; font-size: x-large; font-weight: 750;"><strong>STUDENTS’ GYMKHANA ELECTIONS</strong></div>
+                <div style="text-align:center; font-size: x-large; font-weight: 750;"><strong>Year 2023-24 </strong> </div>
+                <div style="font-size: x-larger;">Indian Institute of Technology, Guwahati </div>
+                
+        </div>
+    </div>
+            <div style="width: 10vw; "></div>
+            <div style="width: 80vw; ">
+                <div class = "row">
+                    <div style="width: 60vw;" class = "column" >
+                        
+                    </div>
+                </div>
+                <div class="end">File Ref: IITG/SAC/GYM19/Elections/Nominations/ </div>
+                <div class="row" style="font-size: large;"><h3><u>Nomination Form</u></h3></div>
+                <div>Post contesting for: {{title}}</div><br><br>
+                <div ><strong>Candidate details:</strong></div>
+                <div class="mid">
+                    <div class="lefty"  style="padding-left: 1vw;">
+                        <div>Name: {{name}}</div>
+                        <div>Roll No.: {{roll_number}}</div>
+                        <div>CPI: {{cpi}}</div>
+                        <div>Backlogs: {{backlogs}}</div>
+                        <div>Email Id: {{email}}</div>
+                        <div>Hostel: {{hostel}}</div>
+                    </div>
+                    <div class="lefty" style="padding-right: 20vw;">
+                        <div>Dept. /Branch: {{branch}}</div>
+                        <div>Semester: {{semester}}</div>
+                        <div>Active Backlogs (if any): {{active_backlogs}}</div>
+                        <div>Contact No.: {{contact_no}}</div>
+                        <div>Room No.: {{room_no}}</div>
+                    </div>
+                </div><br><br><br>
+                <!-- <div>Signature with date: <img src="{{sign}}" alt="sign"></div><br> -->
+                <div>Signature with date: </div><br>
+
+                <div ><strong>Proposed by:</strong></div>
+                <div class="mid">
+                    <div class="lefty"  style="padding-left: 1vw;">
+                        <div>Name:{{proposed_by.name}}</div>
+                        <div>Roll No.:{{proposed_by.roll_number}}</div>
+                        <div>CPI:{{proposed_by.cpi}}</div>
+                        <div>Email Id:{{proposed_by.email}}</div>
+                        <div>Hostel:{{proposed_by.hostel}}</div>
+                    </div>
+                    <div class="lefty" style="padding-right: 25vw;">
+                        <div>Dept. /Branch: {{proposed_by.branch}}</div>
+                        <div>Semester: {{proposed_by.semester}}</div>
+                        <div>Contact No.: {{proposed_by.contact_no}}</div>
+                        <div>Room No.: {{proposed_by.room_no}}</div>
+                    </div>
+                </div><br><br><br>
+                <!-- <div>Signature with date: <img src="{{proposed_by_sign}}" alt="proposed-sign"></div><br> -->
+                <div>Signature with date: </div><br>
+                <div ><strong>Seconded by:</strong></div>
+                <div class="mid">
+                    <div class="lefty"  style="padding-left: 1vw;">
+                        <div>Name: {{seconded_by.name}}</div>
+                        <div>Roll No.: {{seconded_by.roll_number}}</div>
+                        <div>CPI: {{seconded_by.cpi}}</div>
+                        <div>Email Id: {{seconded_by.email}}</div>
+                        <div>Hostel: {{seconded_by.hostel}}</div>
+                    </div>
+                    <div class="lefty" style="padding-right: 25vw;">
+                        <div>Dept. /Branch: {{seconded_by.branch}}</div>
+                        <div>Semester: {{seconded_by.semester}}</div>
+                        <div>Contact No.: {{seconded_by.contact_no}}</div>
+                        <div>Room No.: {{seconded_by.room_no}}</div>
+                    </div>
+                </div><br><br><br>
+                <!-- <div>Signature with date: <img src="{{seconded_by_sign}}" alt="seconded-sign"></div> -->
+                <div>Signature with date: </div>
+            </div>
+            <div style="width: 10vw;"></div>
+        </div>
+        <div class="row" style="font-size: large; padding: 5px; margin-top: 30px;  margin-left: 20px; margin-right: 20px; margin-bottom: 10px; height: auto; border: 10px; border-color: black; border-style: solid;">
+            <div style="width: 10vw; "></div>
+            <div style="width: 80vw; ">
+                <div class = "row">
+                    <img src="image.jpg" alt="iitg logo" style="width:10vw;height:10vw;">
+                    <div style="width: 60vw;" class = "column" >
+                        <div class="row" style="font-size:x-large; font-weight: 500;"><strong>STUDENTS’ GYMKHANA ELECTIONS</strong></div>
+                        <div class="row" style="font-size: x-large; font-weight: 500;"><strong>Year 2023-24 </strong> </div>
+                        <div class="row" style="font-size: larger;">Indian Institute of Technology, Guwahati </div>
+                    </div>
+                </div>
+                <div class="end">File Ref: IITG/SAC/GYM19/Elections/Nominations/ </div>
+                <div class="row" style="font-size: large;"><h3><u>Agendas and Declaration Form</u></h3></div>
+                <div>Post contesting for: {{title}} </div><br><br>
+                <div class="mid">
+                    <div class="spacy">
+                        <div>Name: {{name}}</div><br>
+                        <!-- <div>Nick Name.:</div><br> -->
+                        <div>Tagline (Punch line): {{tagline}}</div>
+                    </div>
+                    <div>
+                        <div style=" width: 30vh; height: 30vh; border:1px; border-color:black; border-style: solid;" class="row">
+                            <!-- <img src="{{image}}" alt="Photograph"> -->
+                        </div>
+                    </div>
+                </div>
+                <div><strong>Agendas:</strong>{{agenda_text}}</div><br>
+                <div><strong>Experiences (Credentials if any):</strong></div><br>
+                <div><strong>Declaration by the candidate:</strong></div><br>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I hereby declare that the above information is to the best of my knowledge. I do not have any disciplinary probation by the Institute and will abide by the rules and regulations laid for Gymkhana Election. I do not have any active backlogs to be cleared.</div><br>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I know that any false information in this nomination form will lead to cancellation of my nomination and disciplinary action</div><br><br><br><br><br>
+                <div class="mid">
+                    <div>Signature of candidate with date:</div>
+                    <div>Signature of CEO</div>
+                </div>
+            <div style="width: 10vw;"></div>
+        </div>
+    </div> 
+    </body>
+</html>
+
+
+
+{"agenda 1": "I hereby declare that the above information is to the best of my knowledge. I do not have any disciplinary probation by the Institute and will abide by the rules and regulations laid for Gymkhana Election. I do not have any active backlogs to be cleared.", "agenda 2": "     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aliquam rerum quos molestias commodi eos ratione. Sapiente obcaecati eaque, porro quaerat nesciunt inventore aperiam. Cupiditate fuga magni laborum ut libero assumenda vero repellendus quibusdam, maiores consequuntur eos distinctio animi nulla et voluptatum? Delectus nulla aperiam consequatur minima porro, expedita sint eius libero, enim consequuntur mollitia error reprehenderit nam asperiores quam, cum soluta quibusdam totam consectetur ratione! Nulla, accusantium inventore repudiandae sed expedita perferendis excepturi impedit est, illum nam dolorum minima, exercitationem tempore ratione? Nemo, inventore? Nesciunt quae cupiditate animi aliquam, inventore, iure beatae eligendi recusandae, tempore voluptas non eius. Obcaecati beatae natus dolorum porro praesentium. Enim, similique commodi sequi ipsa impedit molestiae! Quasi a, vel, pariatur magnam beatae qui fuga accusamus necessitatibus ratione officia maxime placeat ab excepturi porro blanditiis nobis totam sunt, libero dicta sed! Fugiat molestias quam illum, facere, ad totam dolorum porro minima expedita repellat sunt officia, assumenda quaerat vero dolore. Aut rem similique, aliquam iure corrupti quos tempora amet reiciendis ea magnam? Voluptate exercitationem labore deserunt nulla. Ad ea quos, consequuntur minus, iste est quidem atque eligendi, animi velit repellat itaque aspernatur. Vitae reiciendis sapiente id eaque aperiam consequuntur libero, corporis aut a deserunt quae voluptatum earum, nobis facilis impedit sunt inventore expedita dolorum maiores officia laborum! Iusto, tempore deserunt consequuntur molestias at corrupti nesciunt rem quasi perferendis adipisci eligendi quis perspiciatis dolorem amet magni odit exercitationem quaerat. Maiores quia eum nemo nostrum veritatis autem eligendi dolorem, magni, quasi asperiores earum voluptate corrupti facere, soluta ea!"}

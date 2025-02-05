@@ -1,0 +1,70 @@
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .regCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    margin: 16px 0px;
+    width: 100%;
+  }
+  
+  .reg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 80%;
+    flex-grow: 1;
+    gap: 20px;
+  }
+  
+  .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .regBtn {
+    background-color: #2b00ff;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    padding: 8px 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+
+  .regBtn:hover {
+    background-color: #1d1dff;
+  }
+  
+  .nomBtn {
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04);
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* padding: 10px 30px; */
+  }
+  
+  .regText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2e2f2f;
+  }
+  

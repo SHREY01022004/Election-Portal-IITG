@@ -1,0 +1,5 @@
+#!/bin/bash
+celery -A election_portal22 worker -l info --pool=gevent --concurrency=500 &
+python manage.py collectstatic --no-input  && gunicorn $app.wsgi:application --bind 0.0.0.0:8000 --log-level=debug --timeout 180  --workers 100  --capture-output
+
+

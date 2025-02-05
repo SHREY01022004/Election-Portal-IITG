@@ -1,0 +1,7 @@
+.item{
+    color : #2B00FF;
+}
+.selected_item{
+    color : #4B5563;
+    border: none;
+}

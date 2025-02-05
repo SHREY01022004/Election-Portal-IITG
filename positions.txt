@@ -1,0 +1,81 @@
+ id |              name               |               title
+----+---------------------------------+-----------------------------------
+ 70 | DANDA AKSHARA                   | Vice President, SGC
+ 19 | CHITTI AVINASH REDDY            | Vice President, SGC
+ 26 | NANDIGRAMA NAGA VENKATA HAREESH | General Secretary SWC
+ 46 | NEERAJ A R                      | Vice President, SGC
+ 41 | P Aashrith Ram                  | General Secretary Technical Board
+ 27 | Kanike Uday                     | Vice President, SGC
+ 30 | RACHIT AWASTHI                  | Vice President, SGC
+ 83 | AMIT KUMAR                      | General Secretary Welfare Board
+ 91 | RAVI RAJ                        | Vice President, SGC
+ 95 | Prerna kumari                   | General Secretary Cultural Board
+ 69 | Anirudh Gupta                   | Vice President, SGC
+ 40 | KISHAN KUMAR                    | General Secretary Technical Board
+ 99 | Ipsita Jain                     | General Secretary SWC
+ 72 | Ayushman Verma                  | General Secretary Sports Board
+ 88 | Yasharth Singh                  | General Secretary HAB
+ 31 | Kuldeep                         | Vice President, SGC
+ 63 | Kumar Saarthi                   | UG Senator
+ 86 | MANGAL SINGH RATHORE            | UG Senator
+ 94 | Aayush Agarwal                  | UG Senator
+ 64 | Akshat tilak                    | UG Senator
+ 51 | Dhiyanesh G                     | UG Senator
+ 77 | Rakesh bhutra                   | UG Senator
+ 55 | Himanshu Raj                    | UG Senator
+ 42 | Sanket                          | General Secretary HAB
+ 50 | Malla Jaswanth                  | UG Senator
+ 54 | Vaibhav Jangid                  | UG Senator
+ 58 | Gadde Sri Ram Rishandra         | UG Senator
+ 53 | Varun Singh Rathore             | UG Senator
+ 90 | Yash Tiwari                     | UG Senator
+ 59 | Bachina Komali                  | Girl Senator
+ 80 | Anushka Choudhary               | UG Senator
+ 73 | Maheshwar Dass                  | PG Senator
+ 45 | Akash Kumar                     | PG Senator
+ 93 | Jagdish Kumar                   | PG Senator
+ 52 | Rahul Gautam                    | UG Senator
+ 48 | VIGHNESH DESHPANDE              | General Secretary SWC
+ 20 | Kunal Pal                       | General Secretary SWC
+ 21 | Amit                            | General Secretary HAB
+ 44 | Rudra Banerjee                  | PG Senator
+ 22 | Manish Ray                      | PG Senator
+ 23 | Sarvesh Murkute                 | UG Senator
+ 24 | Abhishek Rathi                  | Vice President, SGC
+ 25 | Akhilesh Gupta                  | General Secretary Cultural Board
+ 28 | Ritwij kumar                    | UG Senator
+ 29 | Vivek Dond                      | General Secretary HAB
+ 32 | Amit Kumar Sah                  | General Secretary SAIL
+ 33 | Nishchay Singla                 | UG Senator
+ 34 | Kanv Chaudhary                  | General Secretary SAIL
+ 35 | Prayag Raj Bhuyan               | PG Senator
+ 71 | Ayush Awasthi                   | UG Senator
+ 37 | MANGAL                          | General Secretary Welfare Board
+ 38 | Ankit Kumar Mahatha             | General Secretary Sports Board
+ 39 | Saurabh Pantawane               | PG Senator
+ 43 | Uday Pratap Singh Chauhan       | Vice President, SGC
+ 36 | Om Hande                        | PG Senator
+ 49 | PONAKALA HANUMA SAI KRISHNA     | UG Senator
+ 56 | Urmi Gopalakrishna              | General Secretary SAIL
+ 57 | Geetanjay Manik                 | General Secretary SWC
+ 61 | Veeranki Devi Sai Sri           | Girl Senator
+ 60 | Abhijeet                        | PG Senator
+ 62 | Abhinav                         | UG Senator
+ 66 | Amlan Jyoti Gogoi               | PG Senator
+ 65 | Mayank Agrawal                  | UG Senator
+ 67 | Aranya Bhushan Shah             | PG Senator
+ 68 | Ms Priyanka Tripathi            | PG Senator
+ 75 | MOUPARNA GUHA                   | Girl Senator
+ 76 | Abhishek                        | General Secretary HAB
+ 78 | Himanshu Sharma                 | General Secretary Welfare Board
+ 79 | Anany Sihare                    | UG Senator
+ 81 | Girish Dhakar                   | General Secretary Welfare Board
+ 84 | Gaurang Parag Patankar          | General Secretary HAB
+ 85 | Chanchal                        | Girl Senator
+ 87 | Ujjawal Chhajer                 | General Secretary Welfare Board
+ 89 | Shreyas Pimpalkar               | General Secretary Sports Board
+ 92 | RASHMI GAHLOT                   | PG Senator
+ 82 | Saurabh yadav                   | UG Senator
+ 74 | Khushi Agarwal                  | PG Senator
+ 97 | deepsikha pandey                | General Secretary SWC
+ 98 | Akshay Krushna Gharde           | General Secretary SAIL

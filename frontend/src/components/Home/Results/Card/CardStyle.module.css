@@ -1,0 +1,65 @@
+.front {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 11.7rem;
+  height: 16rem;
+  border-radius: 1rem;
+  background-position: center center;
+  background-size: cover;
+  transition: all 0.25s ease-in-out;
+}
+
+.title {
+  position: relative;
+  padding: 0rem 1rem 0.5rem 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.smallTitle {
+  font-size: 75%;
+  padding-bottom: 2rem;
+  font-style: italic;
+}
+
+.name {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2d333b;
+}
+
+.branch {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f71873;
+  order: 0;
+  flex-grow: 0;
+}
+
+.won {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #959da5;
+}
+
+@media only screen and (min-width: 600px) {
+  .front:hover {
+    transform: scale(1.02);
+  }
+  .name {
+    font-size: 3rem;
+  }
+}

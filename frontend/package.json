@@ -1,0 +1,85 @@
+{
+    "name": "frontend",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "/election_portal",
+    "dependencies": {
+        "@material-ui/core": "^4.12.4",
+        "@material-ui/icons": "^4.11.3",
+        "@primer/react": "^35.0.0",
+        "@testing-library/jest-dom": "^5.16.2",
+        "@testing-library/react": "^12.1.2",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/react-helmet": "^6.1.5",
+        "assert": "^2.0.0",
+        "autoprefixer": "^10.4.2",
+        "axios": "^0.26.1",
+        "blind-signatures": "^1.0.7",
+        "buffer": "^6.0.3",
+        "chart.js": "^3.7.1",
+        "constants": "^0.0.2",
+        "crypto-browserify": "^3.12.0",
+        "draft-convert": "^2.1.12",
+        "draft-js": "^0.11.7",
+        "draftjs-to-html": "^0.9.1",
+        "formik": "^2.2.9",
+        "html-react-parser": "^1.4.10",
+        "jsencrypt": "^3.2.1",
+        "postcss": "^8.4.6",
+        "process": "^0.11.10",
+        "prop-types": "^15.8.1",
+        "react": "^17.0.2",
+        "react-app-rewired": "^2.2.1",
+        "react-chartjs-2": "^4.1.0",
+        "react-datetime-picker": "^4.2.0",
+        "react-dom": "^17.0.2",
+        "react-draft-wysiwyg": "^1.14.7",
+        "react-easy-crop": "^4.0.0",
+        "react-full-screen": "^1.1.0",
+        "react-ga": "^3.3.1",
+        "react-google-login": "^5.2.2",
+        "react-helmet": "^6.1.0",
+        "react-hook-form": "^7.29.0",
+        "react-icons": "^4.3.1",
+        "react-image-crop": "^10.0.0",
+        "react-microsoft-login": "^1.15.0",
+        "react-modal": "^3.14.4",
+        "react-redux": "^7.2.6",
+        "react-router-dom": "^6.2.1",
+        "react-scripts": "^5.0.0",
+        "react-snap": "^1.23.0",
+        "react-sticky-box": "^1.0.2",
+        "redux": "^4.1.2",
+        "redux-devtools-extension": "^2.13.9",
+        "redux-thunk": "^2.4.1",
+        "styled-components": "^5.3.3",
+        "swiper": "^8.0.7",
+        "tailwindcss": "^3.0.18",
+        "web-vitals": "^2.1.4",
+        "yup": "^0.32.11"
+    },
+    "scripts": {
+        "start": "react-app-rewired start",
+        "build": "react-app-rewired build",
+        "test": "react-app-rewired test",
+        "eject": "react-app-rewired eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

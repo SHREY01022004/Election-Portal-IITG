@@ -1,0 +1,52 @@
+:root {
+  --CARD_WIDTH: 15rem;
+  --CARD_HEIGHT: 19.2rem;
+}
+
+.front {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: var(--CARD_WIDTH);
+  height: var(--CARD_HEIGHT);
+  border-radius: 1rem;
+  background-position: center center;
+  background-size: cover;
+  transition: all 0.25s ease-in-out;
+}
+/* .front:after {
+  content:'\A';
+  position:absolute;
+  width:100%; height:100%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.6);
+  opacity:0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.front:hover:after {
+  opacity:0.4;
+} */
+
+.title {
+  position: relative;
+  padding: 0rem 1rem 0.5rem 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.smallTitle {
+  font-size: 75%;
+  padding-bottom: 2rem;
+  font-style: italic;
+}
+
+@media only screen and (min-width: 600px) {
+  .front:hover {
+    transform: scale(1.02);
+  }
+}

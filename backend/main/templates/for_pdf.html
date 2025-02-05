@@ -1,0 +1,564 @@
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{name}}_Agenda</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <!-- Bootstrap CSS -->
+
+    <style>
+        :root {
+            --bs-blue: #0d6efd;
+            --bs-indigo: #6610f2;
+            --bs-purple: #6f42c1;
+            --bs-pink: #d63384;
+            --bs-red: #dc3545;
+            --bs-orange: #fd7e14;
+            --bs-yellow: #ffc107;
+            --bs-green: #198754;
+            --bs-teal: #20c997;
+            --bs-cyan: #0dcaf0;
+            --bs-white: #fff;
+            --bs-gray: #6c757d;
+            --bs-gray-dark: #343a40;
+            --bs-gray-100: #f8f9fa;
+            --bs-gray-200: #e9ecef;
+            --bs-gray-300: #dee2e6;
+            --bs-gray-400: #ced4da;
+            --bs-gray-500: #adb5bd;
+            --bs-gray-600: #6c757d;
+            --bs-gray-700: #495057;
+            --bs-gray-800: #343a40;
+            --bs-gray-900: #212529;
+            --bs-primary: #0d6efd;
+            --bs-secondary: #6c757d;
+            --bs-success: #198754;
+            --bs-info: #0dcaf0;
+            --bs-warning: #ffc107;
+            --bs-danger: #dc3545;
+            --bs-light: #f8f9fa;
+            --bs-dark: #212529;
+            --bs-primary-rgb: 13, 110, 253;
+            --bs-secondary-rgb: 108, 117, 125;
+            --bs-success-rgb: 25, 135, 84;
+            --bs-info-rgb: 13, 202, 240;
+            --bs-warning-rgb: 255, 193, 7;
+            --bs-danger-rgb: 220, 53, 69;
+            --bs-light-rgb: 248, 249, 250;
+            --bs-dark-rgb: 33, 37, 41;
+            --bs-white-rgb: 255, 255, 255;
+            --bs-black-rgb: 0, 0, 0;
+            --bs-body-bg-rgb: 255, 255, 255;
+            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+            --bs-body-font-family: var(--bs-font-sans-serif);
+            --bs-body-font-size: 1rem;
+            --bs-body-font-weight: 400;
+            --bs-body-line-height: 1.5;
+            --bs-body-bg: #fff;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+
+        .container,
+        .container-fluid,static
+        .container-xxl,
+        .container-xl,
+        .container-lg,
+        .container-md,
+        .container-sm {
+            width: 100%;
+            /* padding-right: var(--bs-gutter-x, 0.75rem);
+          padding-left: var(--bs-gutter-x, 0.75rem); */
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .row {
+            /* --bs-gutter-x: 1.5rem; */
+            /* --bs-gutter-y: 0; */
+            display: flex;
+            flex-wrap: wrap;
+            /* margin-top: calc(-1 * var(--bs-gutter-y)); */
+            /* margin-right: calc(-0.5 * var(--bs-gutter-x));
+          margin-left: calc(-0.5 * var(--bs-gutter-x)); */
+        }
+
+        .row>* {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 100%;
+            /* padding-right: calc(var(--bs-gutter-x) * 0.5);
+          padding-left: calc(var(--bs-gutter-x) * 0.5); */
+            /* margin-top: var(--bs-gutter-y); */
+        }
+
+        .col {
+            flex: 1 0 0%;
+        }
+
+        .col-1 {
+            flex: 0 0 auto;
+            width: 8.33333333%;
+        }
+
+        .col-2 {
+            flex: 0 0 auto;
+            width: 16.66666667%;
+        }
+
+        .col-3 {
+            flex: 0 0 auto;
+            width: 25%;
+        }
+
+        .col-4 {
+            flex: 0 0 auto;
+            width: 33.33333333%;
+        }
+
+        .col-5 {
+            flex: 0 0 auto;
+            width: 41.66666667%;
+        }
+
+        .col-6 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+
+        .col-7 {
+            flex: 0 0 auto;
+            width: 58.33333333%;
+        }
+
+        .col-8 {
+            flex: 0 0 auto;
+            width: 66.66666667%;
+        }
+
+        .col-9 {
+            flex: 0 0 auto;
+            width: 75%;
+        }
+
+        .col-10 {
+            flex: 0 0 auto;
+            width: 83.33333333%;
+        }
+
+        .col-11 {
+            flex: 0 0 auto;
+            width: 91.66666667%;
+        }
+
+        .col-12 {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
+        .offset-1 {
+            margin-left: 8.33333333%;
+        }
+
+        .offset-2 {
+            margin-left: 16.66666667%;
+        }
+
+        .offset-3 {
+            margin-left: 25%;
+        }
+
+        .offset-4 {
+            margin-left: 33.33333333%;
+        }
+
+        .offset-5 {
+            margin-left: 41.66666667%;
+        }
+
+        .offset-6 {
+            margin-left: 50%;
+        }
+
+        .offset-7 {
+            margin-left: 58.33333333%;
+        }
+
+        .offset-8 {
+            margin-left: 66.66666667%;
+        }
+
+        .offset-9 {
+            margin-left: 75%;
+        }
+
+        .offset-10 {
+            margin-left: 83.33333333%;
+        }
+
+        .offset-11 {
+            margin-left: 91.66666667%;
+        }
+
+
+        .mt-1 {
+            margin-top: 0.25rem !important;
+        }
+
+        .mt-2 {
+            margin-top: 0.5rem !important;
+        }
+
+        .mt-3 {
+            margin-top: 1rem !important;
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem !important;
+        }
+
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+
+        .table {
+            --bs-table-bg: transparent;
+            --bs-table-accent-bg: transparent;
+            --bs-table-striped-color: #212529;
+            --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+            --bs-table-active-color: #212529;
+            --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+            --bs-table-hover-color: #212529;
+            --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            vertical-align: top;
+            border-color: #dee2e6;
+        }
+
+        .table> :not(caption)>*>* {
+            padding: 0.5rem 0.5rem;
+            background-color: var(--bs-table-bg);
+            border-bottom-width: 1px;
+            box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+        }
+
+        .table>tbody {
+            vertical-align: inherit;
+        }
+
+        .table>thead {
+            vertical-align: bottom;
+        }
+
+        .table-primary {
+            --bs-table-bg: #cfe2ff;
+            --bs-table-striped-bg: #c5d7f2;
+            --bs-table-striped-color: #000;
+            --bs-table-active-bg: #bacbe6;
+            --bs-table-active-color: #000;
+            --bs-table-hover-bg: #bfd1ec;
+            --bs-table-hover-color: #000;
+            color: #000;
+            border-color: #bacbe6;
+        }
+
+
+        .pt-2 {
+            padding-top: 0.5rem !important;
+        }
+
+        .pt-3 {
+            padding-top: 1rem !important;
+        }
+
+        .border-primary {
+            border-color: #0d6efd !important;
+        }
+
+        .p-2 {
+            padding: 0.5rem !important;
+        }
+
+        .nlast {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+
+<body style="font-family: 'Times New Roman', Times, serif;">
+
+    <!-- <div style="margin: 32px;margin-left: -10px;" class="imgClass"> -->
+        <!-- <img src="https://swc.iitg.ac.in/elections_api/media/candidate_profile/Header_JMwEVCl.png" alt=""> -->
+        <div class="row" style="margin-bottom: 28px;">
+        <div class="col-11">
+            <div style="text-align:center; font-size: 28px; font-weight: 750;"><strong>STUDENTS’ GYMKHANA ELECTIONS</strong></div>
+            <div style="text-align:center; font-size: 24px; font-weight: 750;"><strong>Year 2024-25 </strong> </div>
+            <div style="text-align:center; font-size: 24px; font-weight: 750;">Indian Institute of Technology, Guwahati </div>
+            
+    </div>
+    </div>
+    <div style="text-align: right;">File Ref: IITG/SAC/GYM23/Elections/Nominations/ </div>
+    <div style="font-size: 20px; text-align: center;"><strong> <u> Nomination Form </u></strong> </div>
+
+    <br>
+    <div style="font-size: 19px;">Post contesting for: <strong> {{title}} </strong> </div>
+    <br>
+    <br>
+    <div style="font-size: 17px;"><strong>Candidate details:</strong></div>
+    <table style="font-size: 15px;">
+        <tr>
+            <td>
+                Name: {{name}}
+            </td>
+            <td>
+                Dept. /Branch: {{mbranch}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Roll No.: {{roll_number}}
+            </td>
+            <td>
+                Semester: {{semester}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                CPI: {{cpi}}
+            </td>
+            <td>
+                Active Backlogs (if any): {{active_backlogs}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Backlogs: {{backlogs}}
+            </td>
+            <td>
+                Contact No.: {{contact_no}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Email Id: {{email}}
+            </td>
+            <td>
+                Room No.: {{room_no}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Hostel: {{mhostel}}
+            </td>
+        </tr>
+
+    </table>
+    <br>
+    <div style="font-size: 15px;" >Signature with date: </div><br>
+    <br>
+    <br>
+    <br>
+
+    <div style="font-size: 17px;" ><strong>Proposed by:</strong></div>
+    <table style="font-size: 15px;">
+        <tr>
+            <td>
+                Name:{{proposed_by.name}}
+            </td>
+            <td>
+                Dept. /Branch: {{pbranch}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Roll No.:{{proposed_by.roll_number}}
+            </td>
+            <td>
+                Semester: {{proposed_by.semester}}
+            </td>
+        </tr>
+
+        <tr> 
+            <td>
+                CPI:{{proposed_by.cpi}}
+            </td>
+            <td>
+                Contact No.: {{proposed_by.contact_no}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Email Id:{{proposed_by.email}}
+            </td>
+            <td>
+                Room No.: {{proposed_by.room_no}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Hostel:{{phostel}}
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <div style="font-size: 15px;" >Signature with date: </div><br>
+
+    <br><br><br>
+    <div style="font-size: 17px;" ><strong>Seconded by:</strong></div>
+    <table style="font-size: 15px;">
+        <tr>
+            <td>
+                Name:{{seconded_by.name}}
+            </td>
+            <td>
+                Dept. /Branch: {{sbranch}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Roll No.:{{seconded_by.roll_number}}
+            </td>
+            <td>
+                Semester: {{seconded_by.semester}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                CPI:{{seconded_by.cpi}}
+            </td>
+            <td>
+                Contact No.: {{seconded_by.contact_no}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Email Id:{{seconded_by.email}}
+            </td>
+            <td>
+                Room No.: {{seconded_by.room_no}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Hostel:{{shostel}}
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <div style="font-size: 15px;" >Signature with date: </div><br>
+
+    <!-- <div style="margin: 20px;margin-left: -10px;" class="imgClass">
+        <img src="https://swc.iitg.ac.in/elections_api/media/candidate_profile/Header_JMwEVCl.png" alt="">
+    </div> -->
+    <pdf:nextpage /> 
+    <div class="row" style="padding-top: 28px; margin-top: 28px; margin-bottom: 28px;">
+    <div class="col-11">
+        <div style="text-align:center; font-size: 28px; font-weight: 750;"><strong>STUDENTS’ GYMKHANA ELECTIONS</strong></div>
+        <div style="text-align:center; font-size: 24px; font-weight: 750;"><strong>Year 2024-25 </strong> </div>
+        <div style="text-align:center; font-size: 24px; font-weight: 750;">Indian Institute of Technology, Guwahati </div>
+        
+</div>
+</div>
+<div style="text-align: right;">File Ref: IITG/SAC/GYM23/Elections/Nominations/ </div>
+    <div style="font-size: 20px; text-align: center;"><strong> <u> Agendas and Declaration Form </u></strong> </div>
+    <br>
+    <table> 
+        <tr>
+            <td>
+                <div style="font-size: 15px;" >Post contesting for: </div>
+                <div style="font-size: 15px;" >{{title}} </div><br>
+                <div style="font-size: 15px;" >Name: {{name}} </div><br>
+                
+                <div style="font-size: 15px;" >Tagline (Punch line): {{tagline}} </div><br>            
+            </td>
+            <td></td>
+            <td>
+                <!-- <div style="border: #000 1px solid; height: 148px;width: 140px;display: block;"> -->
+                    <!-- <img src="{{image}}" style="border: #000 2px solid;" alt=""> -->
+                    {% comment %} <img src="{{image}}" style="height: 147px;width: 150px; object-fit: cover;"  alt="Image not loaded">    {% endcomment %}
+                    <img src="{{image}}" style="object-fit: cover;"  alt="Image not loaded">
+                <!-- </div> -->
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    {% for key,value in agenda_text.items %}
+    <ul>
+        <div style="font-size: 18px;"><strong>
+            {{key}} 
+        </strong></div>
+        <div style="font-size: 16px;">
+            {{value |safe}} 
+        </div>
+    </ul>    
+    <br>
+    {% endfor %}
+    
+    <pdf:nextpage /> 
+    
+    <div style="font-size: 16px;">
+        <div><strong>Declaration by the candidate:</strong></div><br>
+        <div>
+            I, hereby declare my nomination for the Students Gymkhana Council post for the session 2024-25. With this declaration, I commit to contesting in the SGC elections 2024-25 in a manner that upholds fairness and integrity, adhering to all rules and regulations outlined by the Election Commission. I understand and acknowledge that the Election Commission holds the authority to cancel my candidature and impose strict penalties if I am found engaging in any form of unfair practices or violating the code of conduct established for the elections. I affirm my dedication to conducting myself in a manner that reflects the principles of honesty, transparency, and respect for the democratic process.
+        </div>
+        <div>
+            In case of official assumption of the post, I pledge to uphold and honour the rules and regulations of the institute with utmost sincerity. I commit to maintaining the institute's honour and glory by adhering to its principles and values. I solemnly affirm that I will refrain from any form of substance abuse and will not violate any hostel rules and regulations, academic discipline, student code of conduct, or anti-ragging protocols. I accept that any violation of the aforementioned guidelines grants the institute authority the right to suspend my post without further discussion and to take severe disciplinary actions against me. I signify my unwavering dedication to fulfilling my responsibilities with integrity and dignity.
+        </div>
+        <div>I know that any false information in this nomination form will lead to cancellation of my nomination and disciplinary action</div>
+        <br><br><br>
+        <table>
+            <tr>
+                <td>
+                    Signature of candidate with date:
+                </td>
+                <td></td>
+                <td>
+                    Signature of CEO
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+</body>
+
+</html>

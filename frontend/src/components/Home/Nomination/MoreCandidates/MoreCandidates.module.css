@@ -1,0 +1,31 @@
+.heading {
+    /* font-family: 'Roboto'; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+
+    display: flex;
+    align-items: center;
+
+    /* Grey/800 */
+
+    color: #2D333B;
+}
+
+
+.container::-webkit-scrollbar {
+    height: 8px;
+}
+.container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.container::-webkit-scrollbar-thumb {
+    height: 8px;
+    border-radius: 4px;
+    background: #a4a4a4;
+}
+.container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

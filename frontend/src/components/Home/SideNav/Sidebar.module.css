@@ -1,0 +1,41 @@
+.sidebarLink {
+  align-items: center;
+  padding: 1.1rem;
+  height: 2.8rem;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.sidebarLabel {
+  /* margin-left: 16px; */
+}
+
+.dropdownLink {
+  background: #fff;
+  height: 2.8rem;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #414757;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.dropdownLink :hover {
+  /* background: #b3b8c5; */
+  color: #2b00ff;
+  font-weight: 500;
+}
+
+.selected {
+  border-left: solid #2b00ff;
+  border-left-width: 4px;
+  color: #2b00ff;
+}
+
+.electionBlue {
+  color: #2b00ff;
+  border-color: #2b00ff;
+  font-weight: 700;
+}

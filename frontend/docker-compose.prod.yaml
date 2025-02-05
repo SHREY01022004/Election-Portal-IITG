@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  electionsweb:
+    container_name: elections_portal_fd
+    build:
+        context: .
+    restart: always
+    ports:
+      - "3011:3000"
+    command: sh -c "cd /app && serve -s build -l 3000"
+    env_file:
+      - .env.production

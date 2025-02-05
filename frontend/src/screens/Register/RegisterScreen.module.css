@@ -1,0 +1,109 @@
+/* body {
+    background-color: #f8fafe;
+}  */
+.cont {
+  margin-top: 7%;
+}
+
+.button {
+  background: #2b00ff;
+  border: 1px solid rgba(27, 31, 35, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.1);
+  border-radius: 6px;
+  color: #080808;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+.button:hover {
+  background: #1b019c;
+  color: white;
+}
+
+.button2 {
+  background: #34D058;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  box-sizing: border-box;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.button3 {
+  background: #F71873;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  box-sizing: border-box;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+
+
+}
+
+.error {
+  background: #f30014b6;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  box-sizing: border-box;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.input {
+  height: 2.5rem;
+  padding: 0 1rem;
+  background: #ffffff;
+  border: 1px solid #dbdde0;
+  box-sizing: border-box;
+  box-shadow: inset 0px 1px 2px rgba(27, 31, 35, 0.075);
+  border-radius: 6px;
+}
+
+.input {
+  outline: none;
+  border: 1px solid #dddddd;
+}
+
+.input:focus {
+  box-shadow: 0 0 5px #a7c3f5;
+  border: 1px solid #a7c3f5;
+}
+
+.svgs {
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.brick {
+  z-index: -1000;
+  top: 0%;
+  left: 0%;
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    width: 100%;
+    padding: 7px 14px;
+  }
+}

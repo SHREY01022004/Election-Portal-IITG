@@ -1,0 +1,32 @@
+.loader {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .loader .circle {
+    background-image:linear-gradient(90deg, white, #3AE180);
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 50%;
+    border-width: 0px;
+    animation: rot 2s linear infinite; 
+    padding: 7px;
+    box-sizing: content-box;
+  }
+  
+  .circle > div {
+    background:white;
+    height: 100%;
+    width: 100%;
+    border-style: solid;
+    border-color:transparent;
+    border-radius: 50%;
+    border-width: 1px;
+  }
+  
+  @keyframes rot {
+     0% { transform: rotate(0deg) }
+     100% { transform: rotate(360deg); }
+  }

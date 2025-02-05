@@ -1,0 +1,61 @@
+.sidebarLink {
+  align-items: center;
+  height: 2.8rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.sidebarLabel {
+  color: #2d333b;
+  font-size: 1rem;
+}
+
+.dropdownLink {
+  background: #f9f9f9;
+  height: 2.8rem;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #414757;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.dropdownLink:hover {
+  background: #edeeef;
+}
+
+.selected {
+  border-left: solid #2b00ff;
+  border-left-width: 4px;
+  color: #2b00ff;
+  background: #dbdde0;
+}
+
+.electionBlue {
+  color: #2b00ff;
+  border-color: #2b00ff;
+  font-weight: 700;
+}
+.button {
+  background: #f9f9f9;
+  border: 1px solid rgba(27, 31, 35, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.1);
+  border-radius: 6px;
+  color: #4b5563;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  transition: ease-in-out 0.4s;
+  font-size: 1.025rem;
+}
+
+.button2 {
+  background: #2b00ff;
+  color: #f9f9f9;
+  transition: ease-in-out 0.4s;
+}

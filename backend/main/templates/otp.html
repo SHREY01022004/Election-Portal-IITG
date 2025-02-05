@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body
+    style="
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol';
+    "
+  >
+    <div style="max-width: 400px; margin-left: auto; margin-right: auto;">
+      <div
+        style="
+          background: rgba(209, 201, 245, 0.1);
+          height: 82px;
+          margin-bottom: 38px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+      <svg
+            width="43"
+            height="34"
+            viewBox="0 0 43 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="margin-left: 8px;"
+          >
+            <path
+              d="M42.7837 11.5L23.8276 19.3807V16.6972L42.7837 8.93164V11.5Z"
+              fill="#64589C"
+            />
+            <path
+              d="M23.3276 19.5072L0.170776 14.7359V11.854L23.3276 16.6849V19.5072Z"
+              fill="#64589C"
+            />
+            <path
+              d="M1.00171 15.4258L22.9364 19.86V33.9999L1.00171 29.2746V15.4258Z"
+              fill="#64589C"
+            />
+            <path
+              d="M23.3962 19.9852L42.2263 12.1992V25.413L23.3962 34.0001V19.9852Z"
+              fill="#64589C"
+            />
+            <path
+              d="M24.463 8.54834L24.3291 8.60109V8.9733C24.3297 9.07024 24.3007 9.16505 24.2461 9.24514C24.1915 9.32523 24.1138 9.38681 24.0233 9.4217V9.4217L19.2364 11.2886C19.1811 11.3107 19.1221 11.3219 19.0626 11.3218C18.9403 11.3218 18.8227 11.2752 18.7336 11.1916C18.6445 11.1079 18.5906 10.9934 18.5829 10.8714L17.223 11.4088L19.0704 11.8484L26.3347 8.91761L24.463 8.54834Z"
+              fill="#64589C"
+            />
+            <path
+              d="M24.3309 5.06499V8.18917L24.4286 8.15107L27.6739 8.7929L19.1034 12.2492L15.9539 11.4999L18.5837 10.4605V4.93994L0.170776 11.4325L23.6295 16.1647L42.3355 8.54184L24.3309 5.06499Z"
+              fill="#64589C"
+            />
+            <path
+              d="M23.8499 6.57498e-05C23.8379 0.00015769 23.8259 0.00247615 23.8147 0.00690417L19.0279 1.79466C19.0092 1.80165 18.993 1.8142 18.9817 1.83061C18.9703 1.84703 18.9643 1.86653 18.9644 1.88649V10.8438C18.9643 10.8598 18.9682 10.8756 18.9757 10.8898C18.9832 10.9039 18.9941 10.916 19.0073 10.9249C19.0205 10.934 19.0356 10.9397 19.0514 10.9416C19.0673 10.9435 19.0833 10.9414 19.0982 10.9357L23.8851 9.06879C23.9036 9.06164 23.9195 9.04903 23.9307 9.03263C23.9418 9.01622 23.9477 8.9968 23.9476 8.97696V0.0977575C23.948 0.0823457 23.9448 0.0670532 23.9382 0.0531302C23.9316 0.0392072 23.9217 0.0270492 23.9095 0.0176503C23.8921 0.00545985 23.8712 -0.000714034 23.8499 6.57498e-05V6.57498e-05Z"
+              fill="#64589C"
+            />
+          </svg>
+      <div
+        style="
+          /* font-family: 'Poppins'; */
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.06em;
+          color: #231a4c;
+          margin-left: 15px;
+          text-align: center;
+        "
+      >
+        Election Commission
+      </div>
+    </div>
+      <div
+        style="
+          /* font-family: 'Poppins'; */
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.06em;
+          color: #231a4c;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        "
+      >
+        Here is your OTP
+      </div>
+      <div
+        style="
+          background: rgba(209, 201, 245, 0.3);
+          border-radius: 12px;
+          text-align: center;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-left: 88px;
+          padding-right: 89px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 29px;
+        "
+      >
+        <div
+          style="
+            /* font-family: 'Poppins'; */
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 48px;
+            letter-spacing: 0.06em;
+            color: #231a4d;
+          "
+        >
+          {{otp}}
+        </div>
+      </div>
+      <div
+        style="
+          /* font-family: 'Poppins'; */
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 0.06em;
+          color: #231a4c;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 13px;
+          margin-bottom: 247px;
+          text-align: center;
+        "
+      >
+        Do not share this with anyone
+      </div>
+      <div
+        style="
+          margin-left: auto;
+          margin-right: auto;
+          /* font-family: 'Poppins'; */
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 0.06em;
+          color: #231a4c;
+          max-width: 231px;
+          text-align: center;
+        "
+      >
+        This is an auto generated email, please do not reply
+      </div>
+      <div
+        style="
+          margin-left: auto;
+          margin-right: auto;
+          /* font-family: 'Poppins'; */
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 0.06em;
+          color: #bbbbbb;
+          margin-bottom: 36px;
+          max-width: 260px;
+          text-align: center;
+          margin-top: 7px;
+        "
+      >
+        If you received this by mistake, please inform Election Commission
+      </div>
+      <div
+        style="
+          background: rgba(209, 201, 245, 0.1);
+          padding-top: 26px;
+          padding-bottom: 15px;
+          margin-bottom: 0;
+        "
+      >
+        <div style="text-align: center; display: flex; flex-direction: row; align-items: center; justify-content: center;">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M33.1709 16.9609L28.2143 4.97559H18.0343L23.1434 17L17.9581 29.0244H28.2143L33.1709 16.9609Z"
+              fill="#64589C"
+            />
+            <path
+              d="M0.00012207 16.9609L4.95667 4.97559H15.1367L10.0276 17L15.2129 29.0244H4.95667L0.00012207 16.9609Z"
+              fill="#64589C"
+            />
+            <path
+              d="M11.4002 20.1908L18.0343 4.97559L21.8372 13.9258L15.2129 29.0244L11.4002 20.1908Z"
+              fill="#64589C"
+            />
+          </svg>
+          <div
+          style="
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.06em;
+            color: #231a4c;
+            max-width: 231px;
+            text-align: center;
+            flex-direction: column;
+            padding-top: 10px;
+            margin-left: 10px;"
+          >
+            <div>
+            Student's Web Committee
+          </div>
+          <div>
+          2023-24
+        </div>
+          </div>
+          <!-- <svg
+            width="43"
+            height="34"
+            viewBox="0 0 43 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="margin-left: 8px;"
+          >
+            <path
+              d="M42.7837 11.5L23.8276 19.3807V16.6972L42.7837 8.93164V11.5Z"
+              fill="#64589C"
+            />
+            <path
+              d="M23.3276 19.5072L0.170776 14.7359V11.854L23.3276 16.6849V19.5072Z"
+              fill="#64589C"
+            />
+            <path
+              d="M1.00171 15.4258L22.9364 19.86V33.9999L1.00171 29.2746V15.4258Z"
+              fill="#64589C"
+            />
+            <path
+              d="M23.3962 19.9852L42.2263 12.1992V25.413L23.3962 34.0001V19.9852Z"
+              fill="#64589C"
+            />
+            <path
+              d="M24.463 8.54834L24.3291 8.60109V8.9733C24.3297 9.07024 24.3007 9.16505 24.2461 9.24514C24.1915 9.32523 24.1138 9.38681 24.0233 9.4217V9.4217L19.2364 11.2886C19.1811 11.3107 19.1221 11.3219 19.0626 11.3218C18.9403 11.3218 18.8227 11.2752 18.7336 11.1916C18.6445 11.1079 18.5906 10.9934 18.5829 10.8714L17.223 11.4088L19.0704 11.8484L26.3347 8.91761L24.463 8.54834Z"
+              fill="#64589C"
+            />
+            <path
+              d="M24.3309 5.06499V8.18917L24.4286 8.15107L27.6739 8.7929L19.1034 12.2492L15.9539 11.4999L18.5837 10.4605V4.93994L0.170776 11.4325L23.6295 16.1647L42.3355 8.54184L24.3309 5.06499Z"
+              fill="#64589C"
+            />
+            <path
+              d="M23.8499 6.57498e-05C23.8379 0.00015769 23.8259 0.00247615 23.8147 0.00690417L19.0279 1.79466C19.0092 1.80165 18.993 1.8142 18.9817 1.83061C18.9703 1.84703 18.9643 1.86653 18.9644 1.88649V10.8438C18.9643 10.8598 18.9682 10.8756 18.9757 10.8898C18.9832 10.9039 18.9941 10.916 19.0073 10.9249C19.0205 10.934 19.0356 10.9397 19.0514 10.9416C19.0673 10.9435 19.0833 10.9414 19.0982 10.9357L23.8851 9.06879C23.9036 9.06164 23.9195 9.04903 23.9307 9.03263C23.9418 9.01622 23.9477 8.9968 23.9476 8.97696V0.0977575C23.948 0.0823457 23.9448 0.0670532 23.9382 0.0531302C23.9316 0.0392072 23.9217 0.0270492 23.9095 0.0176503C23.8921 0.00545985 23.8712 -0.000714034 23.8499 6.57498e-05V6.57498e-05Z"
+              fill="#64589C"
+            />
+          </svg> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

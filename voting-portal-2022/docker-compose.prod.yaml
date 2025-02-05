@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+  web:
+    build:
+        context: .
+    ports:
+      - "127.0.0.1:3013:3000"
+    command: sh -c "cd /app && serve -s build"
+    env_file:
+      - .env

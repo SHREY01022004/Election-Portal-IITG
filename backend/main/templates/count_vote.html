@@ -1,0 +1,87 @@
+{% load static %}
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SGC Elections | Results</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-indigo.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="{% static 'post/base.css' 'sgc' %}">
+</head>
+
+<body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row mat-evelation-z6">
+                <!-- Title -->
+                <span class="mdl-layout-title">SGC Elections vote counting</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="">Vote</a>
+                </nav>
+            </div>
+        </header>
+        <main class="mdl-layout__content mx-auto">
+            {% if not start_count %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                <textarea name="private_key" placeholder="Enter your private key" rows="20" cols="100"
+                    style="display:block;">
+                </textarea>
+                <button type="submit">Start Counting</button>
+            </form>
+            {% endif %}
+            <div class="page-content">
+                <pre id="stream-content" class="stream-content"></pre>
+            </div>
+            {% if  start_count %}
+            <a href="/elections_api/sgc/download_votes" target="_blank">Download Votes</button>
+                {% endif %}
+
+        </main>
+    </div>
+
+</body>
+
+</html>
+
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script>
+    var is_count = "{{ start_count }}";
+    function startCount() {
+        if (is_count) {
+            url = "/elections_api/sgc/result_stream/"
+        } else {
+            url = "/"
+        }
+        var eventSource = new EventSource(url);
+        eventSource.onopen = function () {
+            console.log('Yay! its open?');
+        }
+
+        eventSource.onmessage = function (e) {
+            const data = JSON.parse(e.data)
+            document.getElementById('stream-content').innerHTML = JSON.stringify(data, undefined, 2);
+        }
+
+        eventSource.onerror = function (e) {
+            console.log(JSON.stringify(e))
+            console.log(e)
+            console.log(`error ${e}`);
+            console.log(e.message)
+            eventSource.close()
+        }
+    }
+    if (is_count == "True") {
+        console.log(is_count)
+        startCount()
+    }
+
+</script>

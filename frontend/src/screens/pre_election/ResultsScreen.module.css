@@ -1,0 +1,20 @@
+.win{
+    font-family: 'Atkinson Hyperlegible';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #2E2F2F;
+
+}
+
+.title{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 32px;
+letter-spacing: -0.15px;
+color: #2D333B;
+}

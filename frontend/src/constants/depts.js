@@ -1,0 +1,23 @@
+const DEPT = {
+    'None':"None",
+    '01': 'CSE',
+    '02': 'ECE',
+    '03': 'ME',
+    '04': 'Civil',
+    '05': 'Design',
+    '06': 'BSBE',
+    '07': 'CL',
+    '08': 'EEE',
+    '21': 'Physics',
+    '22': 'Chemistry',
+    '23': 'MNC',
+    '41': 'HSS',
+    '50': 'DSAI',
+    '51': 'Energy',
+    '52': 'Environment',
+    '53': 'Nano-Tech',
+    '54': 'Rural-Tech',
+    '55': 'Linguistics',
+    '61': 'Others',
+}
+export default DEPT;
